@@ -1,0 +1,71 @@
+.main-container
+  section.space--lg
+    .container
+      .row
+        .col-sm-7.col-md-6
+          ul
+            li
+              .show-product-image= image_tag 'pineapple-sock.png'
+        .col-sm-5.col-md-4.col-md-offset-1
+          h2
+            | Pineapple Sock
+          .text-block
+            span.h4.type--strikethrough.inline-block
+              | $20
+            span.h4.inline-block
+              | $18
+          p
+            |  Tivoli's most popular line of consumer digital radios just got a refresh — expect clearer highs and deeper lows. Massive style upgrade with high-calibre aluminum frame and plush knobs and dials. 
+          ul.accordion.accordion-2
+            li
+              .accordion__title
+                span.h5
+                  | Specifications
+              .accordion__content
+                ul.bullets
+                  li
+                    span
+                      | Frequence Response: 25KHz — 24,000KHz
+                  li
+                    span
+                      | DAB+ / FM / AM
+                  li
+                    span
+                      | 16,000 mAh Internal Rehcargable Battery
+                  li
+                    span
+                      | 10 Watts
+            li.active
+              .accordion__title
+                span.h5
+                  | Dimensions
+              .accordion__content
+                ul
+                  li
+                    span
+                      | Product: 3.5”W X 3.0”H X 3.0”D
+                  li
+                    span
+                      | Packaging: 7”W X 6”H X 5”D 
+            li
+              .accordion__title
+                span.h5
+                  | Shipping Info
+              .accordion__content
+                p
+                  |  Generally ships between 2 - 4 working days from order confirmation. Orders only confirmed once payment has successfully processed. NOTE: When using services such as Skrill, payments can take longer to process (approx. 4 days). 
+          form
+            .col-sm-12
+              .input-select
+                select[name="finish"]
+                  option[selected="selected" value="Default"]
+                    | Select A Finish
+                  option[value="Small"]
+                    | Wood Grain
+                  option[value="Medium"]
+                    | Brushed Aluminium
+                  option[value="Larger"]
+                    | Gunmetal Grey
+            .col-sm-6.col-md-8
+              button.btn.btn--primary[type="submit"]
+                | Add To Cart
