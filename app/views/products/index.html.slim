@@ -2,19 +2,5 @@
   section
     .container
       .row
-        - @products.each do |product|
-          .col-sm-4
-            .product
-              = link_to product_path(product)
-                = image_tag product.image_url
-              a.block[href="#"]
+        div#products
 
-              div
-                h5
-                  = product.name
-                span
-                  = product.supplier_name
-              div
-                span.h4.inline-block
-                  | $
-                  = product.price

@@ -4,6 +4,8 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :image_url
       t.string :name
       t.string :supplier_name
+      t.string :description
+      t.string :shipping_info
       t.integer :inventory, default: 0
       t.integer :price
     end
