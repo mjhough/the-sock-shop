@@ -22,3 +22,7 @@ form + form {
   margin-top: 0px;
 }
 
+.logo {
+  width: 150%;
+  height: 150%;
+}

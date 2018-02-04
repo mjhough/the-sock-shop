@@ -2,45 +2,19 @@
   section
     .container
       .row
-        .col-sm-4
-          .product
-            = link_to '/products/1'
-              = image_tag 'leaves-sock.png'
-            a.block[href="#"]
+        - @products.each do |product|
+          .col-sm-4
+            .product
+              = link_to product_path(product)
+                = image_tag product.image_url
+              a.block[href="#"]
 
-            div
-              h5
-                | Leaves Sock
-              span
-                |  Happy Socks
-            div
-              span.h4.inline-block
-                | $18
-        .col-sm-4
-          .product
-            = link_to '/products/1'
-              = image_tag 'pineapple-sock.png'
-            a.block[href="#"]
-
-            div
-              h5
-                | Pineapple Sock
-              span
-                |  Happy Socks
-            div
-              span.h4.inline-block
-                | $269
-        .col-sm-4
-          .product
-            = link_to '/products/1'
-              = image_tag 'big-dot-sock.png'
-            a.block[href="#"]
-
-            div
-              h5
-                | Big Dot Sock
-              span
-                |  Happy Socks
-            div
-              span.h4.inline-block
-                | $269
+              div
+                h5
+                  = product.name
+                span
+                  = product.supplier_name
+              div
+                span.h4.inline-block
+                  | $
+                  = product.price

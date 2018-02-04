@@ -9,7 +9,9 @@ class ProductsController < ApplicationController
     render json: product, status: 200
   end
 
-  def index; end
+  def index
+    @products = Product.all
+  end
 
   def show; end
 end
