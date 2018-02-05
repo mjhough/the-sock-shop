@@ -32,6 +32,10 @@ form + form {
   margin-bottom: 0.5em;
 }
 
+#reviews {
+  margin-top: 10%;
+}
+
 .word-list{
   li {
     padding: 0.2em;

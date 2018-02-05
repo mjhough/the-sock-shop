@@ -1,3 +1,4 @@
+= javascript_include_tag 'show'
 .main-container
   section.space--lg
     .container#sock-container data-sock-id="#{@product_id}"
@@ -21,15 +22,11 @@
           .col-sm-6.col-md-8
             = button_to 'Add to Cart', '#', class: 'btn btn--primary'
 
-          div
+          .col-sm-6.col-md-8
             span.h4.clear-by-20
               | Reviews
-          .text-left
-            ul#reviews.word-list
-              / li
-              /   p
-              /     | This is a review!
-              / hr
-              / li
-              /   p
-              /     | So is this!
+            = form_tag '#', id: 'review-form'
+              = text_area_tag 'content'
+              input type='submit' name='Submit Review' value='Submit Review' class='btn btn--primary'
+            .text-left
+              ul#reviews.word-list

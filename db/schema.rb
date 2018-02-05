@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180204052434) do
+ActiveRecord::Schema.define(version: 20180204210929) do
 
   create_table "products", force: :cascade do |t|
     t.string "image_url"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 20180204052434) do
     t.string "shipping_info"
     t.integer "inventory", default: 0
     t.integer "price"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "content"
+    t.integer "product_id"
+    t.index ["product_id"], name: "index_reviews_on_product_id"
   end
 
 end
